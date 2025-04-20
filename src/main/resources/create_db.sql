@@ -1,0 +1,1 @@
+CREATE DATABASE IF NOT EXISTS mcp_interview_questions_db;
