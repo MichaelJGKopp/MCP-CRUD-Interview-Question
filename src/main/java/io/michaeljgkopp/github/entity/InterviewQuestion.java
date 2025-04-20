@@ -13,6 +13,8 @@ public class InterviewQuestion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(length = 10)
+    private String difficulty;
     private String category;
     private String title;
     @Column(length = 1000)
@@ -58,5 +60,13 @@ public class InterviewQuestion {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(String difficulty) {
+        this.difficulty = difficulty;
     }
 }

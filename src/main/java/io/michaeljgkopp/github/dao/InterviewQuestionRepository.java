@@ -8,9 +8,4 @@ import java.util.List;
 public interface InterviewQuestionRepository extends JpaRepository<InterviewQuestion, Long> {
 
   List<InterviewQuestion> getInterviewQuestionsByCategory(String category);
-
-  List<InterviewQuestion> getInterviewQuestionsRandomlyByCountAndCategory(Integer count,
-      String category);
-
-  List<InterviewQuestion> getInterviewQuestionsRandomlyByCount(Integer count);
 }

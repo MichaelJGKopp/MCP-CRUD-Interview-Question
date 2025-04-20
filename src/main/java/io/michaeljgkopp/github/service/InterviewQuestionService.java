@@ -32,20 +32,6 @@ public class InterviewQuestionService {
     return interviewQuestionRepository.findAll();
   }
 
-  // Get interview questions randomly by category and limit
-  @Tool(name = "iqs_get_interview_questions_random_by_category", description =
-      "Get interview questions randomly by category and limit")
-  public List<InterviewQuestion> getInterviewQuestionsRandomByCategory(String category, int limit) {
-    return interviewQuestionRepository.getInterviewQuestionsRandomlyByCountAndCategory(limit, category);
-  }
-
-  // Get interview questions randomly by limit
-  @Tool(name = "iqs_get_interview_questions_random", description =
-      "Get interview questions randomly by limit")
-  public List<InterviewQuestion> getInterviewQuestionsRandom(int limit) {
-    return interviewQuestionRepository.getInterviewQuestionsRandomlyByCount(limit);
-  }
-
   // Save a new interview question
   @Tool(name = "iqs_save_interview_question", description = "Save an interview question. If id is"
       + " null a new one is created, otherwise the existing one is updated")
